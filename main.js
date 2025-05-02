@@ -17,11 +17,11 @@ function playground() {
 function ifChecks(userInput) {
   if (!userInput.trim()) return updateHtml('<Game> empty', 'red');
   userInput = Number(userInput);
-  if (isNaN(userInput)) updateHtml('<Game> Not a number', 'red');
-  
-  if (userInput === rNum) {
+  if (isNaN(userInput)) {
+    updateHtml('<Game> Not a number', 'red');
+  } else if (userInput === rNum) {
     updateHtml(`<Game> You Won The Game`, 'yellow');
-  } else if (userInput > 99 || userInput < 1) {
+  } else if (userInput > 99 || userInput < 0) {
     updateHtml('<Game> less then 99 more then 1', 'red');
   } else if (userInput > rNum) {
     updateHtml(`<Game> Less Then ${userInput}`, 'red')
