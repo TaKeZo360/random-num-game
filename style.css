@@ -74,3 +74,18 @@ body {
     flex-direction: column;
     gap: 5px;
 }
+
+#inputActions p{
+    animation: slide 1s ease alternate;
+}
+
+@keyframes slide {
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,5 +1,6 @@
 let rNum = Math.floor(Math.random() * 98 + 1);
 console.log(rNum);
+let theClass = 0;
 let inputText = document.getElementById('userInput');
 let sendInput = document.getElementById('sendInput');
 let inputActions = document.getElementById('inputActions');
@@ -11,7 +12,8 @@ sendInput.addEventListener('click', () => {
 function playground() {
   let userInput = inputText.value;
   updateHtml(`<You> ${userInput}`, '#B5B9E2')
-  setTimeout(ifChecks, 1000, userInput)
+  setTimeout(ifChecks, 1000, userInput);
+  theClass += 1;
 }
 
 function ifChecks(userInput) {
@@ -28,11 +30,18 @@ function ifChecks(userInput) {
   } else if (userInput < rNum) {
     updateHtml(`<Game> More then ${userInput}`, 'red');
   }
+  theClass += 1;
 }
 
 function updateHtml(gameText, color) {
   let player = document.createElement('p');
   player.textContent = gameText;
   player.style.color = color;
+  player.classList.add(`parNo${theClass}`)
+  player.style.animation = `slide 1s ease alternate`;
+  if (theClass !== 0) {
+    let preEle = document.querySelector(`.parNo${theClass - 1}`);
+    preEle.classList.remove(`parNo${theClass - 1}`);
+  }
   inputActions.appendChild(player);
 }
