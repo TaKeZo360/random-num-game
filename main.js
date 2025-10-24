@@ -7,6 +7,7 @@ let inputActions = document.getElementById('inputActions');
 
 sendInput.addEventListener('click', () => {
   playground()
+  inputText = "";
 })
 
 function playground() {
