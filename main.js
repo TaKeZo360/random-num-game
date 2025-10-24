@@ -10,6 +10,13 @@ sendInput.addEventListener('click', () => {
   inputText.value = "";
   inputText.textContent = "";
 })
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+      playground()
+      inputText.value = "";
+      inputText.textContent = "";
+  }
+});
 
 function playground() {
   let userInput = inputText.value;
