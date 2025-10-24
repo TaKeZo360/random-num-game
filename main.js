@@ -21,15 +21,15 @@ function ifChecks(userInput) {
   if (!userInput.trim()) return updateHtml('<Game> empty', 'red');
   userInput = Number(userInput);
   if (isNaN(userInput)) {
-    updateHtml('<Game> Not a number', 'red');
+    updateHtml('<Game> Send A Number Bitch', 'red');
   } else if (userInput === rNum) {
-    updateHtml(`<Game> You Won The Game`, 'yellow');
+    updateHtml(`<Game> You Won The Game Bitch`, 'yellow');
   } else if (userInput > 99 || userInput < 0) {
-    updateHtml('<Game> less then 99 more then 1', 'red');
+    updateHtml('<Game> less then 99 more then 1 Bitch', 'red');
   } else if (userInput > rNum) {
-    updateHtml(`<Game> Less Then ${userInput}`, 'red')
+    updateHtml(`<Game> Less Then ${userInput} Bitch`, 'red')
   } else if (userInput < rNum) {
-    updateHtml(`<Game> More then ${userInput}`, 'red');
+    updateHtml(`<Game> More then ${userInput} Bitch`, 'red');
   }
   theClass += 1;
 }
