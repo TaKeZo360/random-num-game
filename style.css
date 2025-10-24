@@ -82,7 +82,8 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 3rem;
+    width: clamp(8em, 40vw, 20em);
+    padding: 0.8em 1em;
     height: 100%;
     border: none;
     border-top-right-radius: 1rem;
