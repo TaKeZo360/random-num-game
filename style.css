@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100dvh;
     height: 100vh;
-    overflow-y: none;
+    overflow: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 
 .fakeConsole {
     width: 90%;
-    height: 80%;
+    height: 75%;
     background-color: #262733;
     border: 2px solid #3C3E53;
     color: #9FA0AE;
